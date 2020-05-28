@@ -23,10 +23,29 @@
 
 <body>
     <h3>edit something here</h3>
-    <textarea id="editor"><p>paragraph</p></textarea>
+
+    <table>
+        <tr>
+            <td colspan="3">
+                <textarea id="ceditor"><p>paragraph test</p>></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Filename to Save As:</td>
+            <td><input id="inputFileNameToSaveAs"></input></td>
+            <td><button onclick="saveTextAsFile()">Save Text to File</button></td>
+        </tr>
+        <tr>
+            <td>Select a File to Load:</td>
+            <td><input type="file" id="fileToLoad"></td>
+            <td><button onclick="loadFileAsText()">Load Selected File</button>
+            </td>
+        </tr>
+    </table>
+
     <script>
         var editor = CodeMirror.fromTextArea
-            (document.getElementById('editor'), {
+            (document.getElementById('ceditor'), {
                 mode: "xml",
                 lineNumbers: true,
                 autoCloseTags: true
